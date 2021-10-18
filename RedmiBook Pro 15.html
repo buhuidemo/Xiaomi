@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/goods.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class='box1'>
+            <img id="src" src="img/computer/RedmiBook Pro 15.jpg" />
+            <img id="src" src="img/computer/RedmiBook Pro 15-2.jpg" />
+        </div>
+        <div class="box2">
+            <p>商品类别：<span id='type'>小米笔记本</span></p>
+            <p>商品名称：<span id='name'>RedmiBook Pro 15</span></p>
+            <p>售价：¥<span id='price'>5299</span></p>
+            <div>
+                <p>选择操作系统</p>
+                <button id="box2System" class="box2Suit">Windows11</button>
+                <button id="box2System" class="box2Suit">Windows10 后续可免费升级</button>
+            </div>
+            <div>
+                <p>选择配置</p>
+                <button id="box2Collocation" class="collocation1">i5-11320H / 锐炬Xe / 16G / 512G / 3…</button>
+                <button id="box2Collocation" class="collocation2">i5-11320H / MX450 / 16G / 512G / 3…</button>
+                <button id="box2Collocation" class="collocation3">i7-11390H / MX450 / 16G / 512G / 3…</button>
+            </div>
+            <div>
+                <p>选择颜色</p>
+                <button class="box2Color">星光灰</button>
+            </div>
+            <button id="cart" class="buy" style="width: 320px;height: 60px;margin-bottom: 5px;margin-top: 10px;" size=''
+                goodsid=''>加入购物车</button>
+            <br>
+            <button class="btn2"><a href="cart.html">去购物车看看</a></button>
+            <button class="btn3"><a href="index.html">返回首页</a></button>
+        </div>
+    </div>
+    <script src="js/goods.js"></script>
+    <script>
+        var box2Edition = document.querySelectorAll('.box2Edition');
+        var box2Color = document.querySelectorAll('.box2Color');
+        var box2Suit = document.querySelectorAll('.box2Suit');
+        var box2System = document.querySelectorAll('#box2System');
+        var box2Collocation = document.querySelectorAll('#box2Collocation');
+        // console.log(box2Btn);
+        // console.log(box2Btn.length);
+
+        for (i = 0; i < box2System.length; i++) {
+            box2System[i].onclick = function () {
+                for (j = 0; j < box2System.length; j++) {
+                    // console.log(this);
+                    box2System[j].style.border = '0.5px solid gainsboro';
+                    box2System[j].style.color = 'black';
+                    console.log(111);
+
+                }
+                this.style.border = '1.8px solid orange';
+                this.style.color = 'orange';
+                // console.log(this);
+                // console.log(this.style.background);
+                // console.log(this);
+                // if (this.style.background == 'white') {
+                //     this.style.background = "#ff6700";
+                // } else {
+                //     this.style.background = 'white';
+                // }
+            }
+        }
+
+        for (i = 0; i < box2Collocation.length; i++) {
+            box2Collocation[i].onclick = function () {
+                for (j = 0; j < box2Collocation.length; j++) {
+                    // console.log(this);
+                    box2Collocation[j].style.border = '0.5px solid gainsboro';
+                    box2Collocation[j].style.color = 'black';
+                    console.log(222);
+
+                }
+                this.style.border = '1.8px solid orange';
+                this.style.color = 'orange';
+                // console.log(this);
+                // console.log(this.style.background);
+                // console.log(this);
+                // if (this.style.background == 'white') {
+                //     this.style.background = "#ff6700";
+                // } else {
+                //     this.style.background = 'white';
+                // }
+                if (this.className == 'collocation1') {
+                    price.innerHTML = 5299;
+
+                } else if (this.className == 'collocation2') {
+                    price.innerHTML = 5799;
+                } else {
+                    price.innerHTML = 6599;
+                }
+            }
+        }
+        for (i = 0; i < box2Color.length; i++) {
+            box2Color[i].onclick = function () {
+                for (j = 0; j < box2Color.length; j++) {
+                    // console.log(this);
+                    box2Color[j].style.border = '0.5px solid gainsboro';
+                    box2Color[j].style.color = 'black';
+                    console.log(333);
+
+                }
+                this.style.border = '1.8px solid orange';
+                this.style.color = 'orange';
+                // console.log(this);
+                // console.log(this.style.background);
+                // console.log(this);
+                // if (this.style.background == 'white') {
+                //     this.style.background = "#ff6700";
+                // } else {
+                //     this.style.background = 'white';
+                // }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+.container {
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+.box1 {
+    width: 613px;
+    /* height: 400px; */
+    /* margin-top: 95px; */
+    float: left;
+    text-align: center;
+    margin-left: 70px;
+    margin-right: 25px;
+}
+
+.box1 img {
+    width: 500px;
+    height: 450px;
+    display: block;
+}
+
+.box2 {
+    /* width: 613px; */
+    /* height: 400px; */
+    float: left;
+    margin-top: 45px;
+}
+
+.box2 p {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.buy {
+    background-color: #ff6700;
+    font-size: 18px;
+    color: aliceblue;
+    border: none;
+}
+
+.box2>p:nth-child(3){
+    color: #ff6700;
+}
+
+.btn2,
+.btn3 {
+    background-color: rgb(192, 169, 169);
+    width: 158px;
+    height: 60px;
+    border: none;
+    background-color: gray;
+}
+
+.btn2 a,
+.btn3 a {
+    font-size: 9px;
+    text-decoration: none;
+    color: honeydew;
+}
+
+.box2 div{
+    width: 320px;
+}
+.box2 div p{
+    font-size: 20px;
+    margin: 0;
+}
+.box2 div button{
+    display: block;
+    width: 320px;
+}
+.box2Color,
+.box2Suit,
+.box2Edition,
+#box2Collocation{
+    display: block;
+    /* width: 156px; */
+    height: 45px;
+    font-size: 15px;
+    margin-bottom: 8px;
+    background-color: white;
+    border: 0.5px solid gainsboro;
+}
+.box2Color:hover,
+.box2Suit:hover,
+.box2Edition:hover{
+    border: 0.5px solid orange;
+}

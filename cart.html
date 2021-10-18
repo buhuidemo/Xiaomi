@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="css/cartCommon.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+    <div class="cart">
+        <!-- 购物车头部 -->
+        <div class="cart-head u-clearfix">
+            <div class="col col-check u-l">
+                <input type="checkbox" id="all" class="check">
+                <label for="all">全选</label>
+            </div>
+            <div class="col col-img u-l">&nbsp;</div>
+            <div class="col col-name u-l">商品名称</div>
+            <div class="col col-price u-l">单价</div>
+            <div class="col col-num u-l">数量</div>
+            <div class="col col-sum u-l">小计</div>
+            <div class="col col-action u-r">操作</div>
+        </div>
+        <!-- 购物车列表 -->
+        <div class="cart-list">
+            <div class="list-item">
+                <!-- 商品块 -->
+                <!-- <div class="item-box  u-clearfix">
+                    <div class="col col-check u-l">
+                        <input type="checkbox" class="check single" style='margin-top:23px'>
+                    </div>
+                    <div class="col col-img u-l">
+                        <img src="images/category/phone/note3-80-2.png"  style='width:45px;height:60px;margin-left:60px'>
+                    </div>
+                    <div class="col col-name u-l" style='margin-top:23px'>
+                        小米8青春版 镜面渐变AI双摄 6GB+64GB 深空灰 全网通4G
+                    </div>
+                    <div class="col col-price u-l" style='margin-top:18px'>3799元</div>
+                    <div class="col col-num u-l" style='margin-top:18px'>
+                        <div class="change-goods-num">
+                            <a href="javascript:;;" class="reduce">-</a>
+                            <input type="text" value="1">
+                            <a href="javascript:;;" class="add">+</a>
+                        </div>
+                    </div>
+                    <div class="col col-sum u-l" style='margin-top:18px'>3788元</div>
+                    <div class="col col-action u-r" style='margin-top:18px'>删除</div>
+                </div> -->
+            </div>
+        </div>
+        <!-- 购物车底部 -->
+        <div class="cart-foot">
+            <div class="section-left u-l">
+                <a href="index.html">继续购物</a>
+                <span>已选择 <i id="totalNum">0</i> 件商品</span>
+            </div>
+            <div class="u-r settlement">去结算</div>
+            <div class="u-r total-price">
+                合计: <em id="totalPrice">0</em> 元
+            </div>
+        </div>
+    </div>
+    <script src="js/cart.js"></script>
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="layer/layer.js"></script>
+
+</body>
+
+
+</html>

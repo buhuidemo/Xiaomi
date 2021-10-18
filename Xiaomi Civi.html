@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/goods.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class='box1'>
+            <img id="src" src="img/phone/Xiaomi Civi.jpg" style="margin: top 10px;">
+            <img id="src" src="img/phone/Xiaomi Civi.jpg" style="margin: top 10px;">
+        </div>
+        <div class="box2">
+            <p>商品类别：<span id='type'>小米手机</span></p>
+            <p>商品名称：<span id='name'>Xiaomi Civi</span></p>
+            <p>售价：¥<span id='price'>2599</span></p>
+            <div>
+                <p>选择版本</p>
+                <button id="et" class="box2Edition">8GB+128GB</button>
+                <button id="em" class="box2Edition">12GB+256GB</button>
+                <button id="eb" class="box2Edition">8GB+256GB</button>
+            </div>
+            <div>
+                <p>选择颜色</p>
+                <button class="box2Color">闪闪黑</button>
+                <button class="box2Color">轻轻蓝</button>
+                <button class="box2Color">怦怦粉</button>
+            </div>
+            <div>
+                <p>选择套装</p>
+                <button id="Suit1" class="box2Suit">标准版</button>
+                <button id="Suit2" class="box2Suit">套装版(赠充电器)</button>
+            </div>
+            <br>
+            <button id="cart" class="buy" style="width: 320px;height: 60px;margin-bottom: 5px;margin-top: 10px;" size=''
+                goodsid=''>加入购物车</button>
+            <br>
+            <button class="btn2"><a href="cart.html">去购物车看看</a></button>
+            <button class="btn3"><a href="index.html">返回首页</a></button>
+        </div>
+    </div>
+    <script src="js/goods.js"></script>
+    <!-- <script>
+        var box2Btn = document.querySelectorAll('.box2Btn');
+        // console.log(box2Btn);
+        // console.log(box2Btn.length);
+        for (i = 0; i < box2Btn.length; i++) {
+            box2Btn[i].onclick = function () {
+                // console.log(this.style.background);
+                // console.log(this);
+                if (this.style.background == 'white') {
+                    this.style.background = "#ff6700";
+                } else {
+                    this.style.background = 'white';
+                }
+
+            }
+        }
+    </script> -->
+
+    <script>
+        var box2Edition = document.querySelectorAll('.box2Edition');
+        var box2Color = document.querySelectorAll('.box2Color');
+        var box2Suit = document.querySelectorAll('.box2Suit');
+        var Suit2 = document.querySelector('#Suit2');
+        let num = 0;
+
+        //选择颜色
+        for (i = 0; i < box2Color.length; i++) {
+            box2Color[i].onclick = function () {
+                for (j = 0; j < box2Color.length; j++) {
+                    // console.log(this);
+                    box2Color[j].style.border = '0.5px solid gainsboro';
+                    box2Color[j].style.color = 'black';
+
+                }
+                this.style.border = '1.8px solid orange';
+                this.style.color = 'orange';
+                // console.log(this);
+                // console.log(this.style.background);
+                // console.log(this);
+                // if (this.style.background == 'white') {
+                //     this.style.background = "#ff6700";
+                // } else {
+                //     this.style.background = 'white';
+                // }
+            }
+        }
+
+
+        //选择套装
+        for (i = 0; i < box2Suit.length; i++) {
+            box2Suit[i].onclick = function () {
+                for (j = 0; j < box2Suit.length; j++) {
+                    // console.log(this);
+                    box2Suit[j].style.border = '0.5px solid gainsboro';
+                    box2Suit[j].style.color = 'black';
+
+
+                }
+                this.style.border = '1.8px solid orange';
+                this.style.color = 'orange';
+
+                //对不同版本进行不同价格的判断
+
+                if (this.id == 'Suit1') {
+                    num = 0;
+                }
+                //限定只有num=0时才进行下面的判断
+                if (num == 0) {
+                    if (this.id == 'Suit2') {
+                        price.innerHTML = price.innerHTML - 0 + 100;
+                        //此时让num不等于0，就不会重复进行判断，价格也就不会点一次就加一次
+                        num++;
+                    }
+                    //失去焦点时，恢复原来价格
+                    Suit2.onblur = function () {
+                        price.innerHTML = price.innerHTML - 0 - 100;
+                    }
+                }
+            }
+        }
+
+        //选择版本
+        for (i = 0; i < box2Edition.length; i++) {
+            box2Edition[i].onclick = function () {
+                for (j = 0; j < box2Edition.length; j++) {
+                    // console.log(this);
+                    box2Edition[j].style.border = '0.5px solid gainsboro';
+                    box2Edition[j].style.color = 'black';
+
+                }
+                this.style.border = '1.8px solid orange';
+                this.style.color = 'orange';
+
+                if (this.id == 'et') {
+                    price.innerHTML = 2599;
+
+                } else if (this.id == 'em') {
+                    price.innerHTML = 3599;
+                } else {
+                    price.innerHTML = 4599;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
